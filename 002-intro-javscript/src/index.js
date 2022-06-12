@@ -1,34 +1,33 @@
-//Desestruracion
-//Asignacion desestructurante
+//
 
 
-const persona = {
-    nombre: 'Maxi',
-    edad: 33,
-    clave: 'Roro',
-    //rango: 'Arquitecto'
-};
+const apiKey = 'TMomxXNGNHFHPl0LrMvlbTdOgafZq93W';
+
+const peticion = fetch(`http://api.giphy.com/v1/gifs/random?api_key=${ apiKey }`);
+
+/*
+peticion
+    .then( resp => resp.json() )
+    .then( ({ data }) => {
+        const { url } = data.images.original;
+        
+        const img = document.createElement('img');
+        img.src = url;
+
+        document.body.append( img );
 
 
-const {nombre:primerNombre, edad, clave} = persona; 
-
-console.log(primerNombre);
-
+    })
+    .catch( console.warn ); */
 
 
-const userContext = ({nombre, edad, rango = 'developer', clave}) => {
-
-    console.log(nombre, edad, rango);
-    return {
-        nombreClave: clave,
-        anios : edad,
-        latlng:{
-            lat: 14.45565,
-            lng: -21.1545
-        }
-    }
-};
-
-const {nombreClave, anios:edadNueva, latlng:{lat, lng}} = userContext(persona);
-
-console.log(nombreClave, edadNueva, lat, lng);
+peticion.then(resp => resp.json())
+.then(({data}) => {
+      console.log(data);
+      const {url} = data.images.original;  
+      const img = document.createElement('img');
+      img.src = url;
+      document.body.append(img);
+    
+    });
+;    
