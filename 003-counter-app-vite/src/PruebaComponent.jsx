@@ -1,10 +1,27 @@
+const titulo = 'Esto es un titulo';
+const parrafo = 'Esto es un parrafo';
 
+
+const persona = {
+    nombre: 'Maximiliano',
+    apellido: 'Soria'
+};
 const appPrueba = () => {
  return (
  <>
-    <h2>Esto es una prueba de componente</h2>
-    <p>Esto es un parrafo</p>
+    <h1> {myFunctiontion()}</h1>
+    <p>{parrafo}</p>
+    <h3>{getPersona()}</h3>
  </>)
 };
 
 export default appPrueba;
+
+
+const myFunctiontion = () => {
+    return 'Titulo desde funcion';
+}
+
+const getPersona = () =>{
+    return JSON.stringify(persona);
+}
