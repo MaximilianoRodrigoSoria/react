@@ -1,3 +1,7 @@
+import { PropTypes } from "prop-types";
+
+
+
 const titulo = 'Esto es un titulo';
 const parrafo = 'Esto es un parrafo';
 
@@ -6,7 +10,8 @@ const persona = {
     nombre: 'Maximiliano',
     apellido: 'Soria'
 };
-const appPrueba = ({titulo, subtitulo}) => {
+const FirstAPP = ({titulo, subtitulo}) => {
+
  console.log(titulo);
  return (
  <>
@@ -16,7 +21,7 @@ const appPrueba = ({titulo, subtitulo}) => {
  </>)
 };
 
-export default appPrueba;
+export default FirstAPP;
 
 
 const myFunctiontion = () => {
@@ -25,4 +30,13 @@ const myFunctiontion = () => {
 
 const getPersona = () =>{
     return JSON.stringify(persona);
+}
+
+FirstAPP.propTypes = {
+    titulo: PropTypes.string.isRequired,
+    subtitulo: PropTypes.number.isRequired
+}
+
+FirstAPP.defaultProps ={
+    titulo: 'No hay titulo'
 }
