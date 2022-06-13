@@ -8,7 +8,10 @@ import './styles.css';
 ReactDOM.createRoot(document.getElementById('root'))
 .render(
   <React.StrictMode>
-    <AppPrueba></AppPrueba>
+    <AppPrueba 
+      titulo = "Es es mi titulo de props"
+      subtitulo = {123}
+      ></AppPrueba>
   </React.StrictMode>
 )
 ;

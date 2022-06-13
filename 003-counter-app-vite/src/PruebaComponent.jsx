@@ -6,11 +6,12 @@ const persona = {
     nombre: 'Maximiliano',
     apellido: 'Soria'
 };
-const appPrueba = () => {
+const appPrueba = ({titulo, subtitulo}) => {
+ console.log(titulo);
  return (
  <>
-    <h1> {myFunctiontion()}</h1>
-    <p>{parrafo}</p>
+    <h1> {titulo}</h1>
+    <p>{subtitulo}</p>
     <h3>{getPersona()}</h3>
  </>)
 };
