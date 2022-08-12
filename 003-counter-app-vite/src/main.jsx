@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppPrueba from './PruebaComponent';
+import FirstApp from './PruebaComponent';
+import HelloWord from './HelloWordApp'
+import CounterApp from './CounterApp'
 
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root'))
 .render(
   <React.StrictMode>
-    <AppPrueba 
-
-      subtitulo = {123}
-      ></AppPrueba>
+    <HelloWord  title="Maximiliano Soria"></HelloWord>
+    <FirstApp 
+          subtitulo = {123}
+    >
+    </FirstApp>
+    <CounterApp value={100}></CounterApp>
   </React.StrictMode>
 )
 ;
